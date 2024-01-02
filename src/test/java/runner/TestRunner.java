@@ -7,7 +7,7 @@ import io.cucumber.junit.Cucumber; //import because of error on line no 8
 
 @RunWith(Cucumber.class)
 @CucumberOptions (features={ "src/test/resources/features"}, 
-glue= {"stepdefinitions","newalgoutilities"},
+glue= {"stepDefinitions","newalgoutilities"},
 monochrome=true,
 dryRun=false,
 plugin= {"pretty",
