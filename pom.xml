@@ -3,11 +3,7 @@
  <groupId>DSALGO_Final-Project-main</groupId>
  <artifactId>DSALGO_Final-Project-main</artifactId>
  <version>0.0.1-SNAPSHOT</version>
- <properties>
-    <maven.compiler.source>21.0.1</maven.compiler.source>
-    <maven.compiler.target>21.0.1</maven.compiler.target>
-</properties>
- <dependencies>
+  <dependencies>
  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
    <groupId>org.seleniumhq.selenium</groupId>
