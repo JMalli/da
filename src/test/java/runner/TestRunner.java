@@ -6,11 +6,13 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber; //import because of error on line no 8 
 
 @RunWith(Cucumber.class)
-@CucumberOptions (features={ "src/test/resources/features"}, 
+@CucumberOptions(features={"src/test/resources/Features"}, 
 glue= {"stepDefinitions","newalgoutilities"},
 monochrome=true,
 dryRun=false,
 plugin= {"pretty",
+		"html:target/Cucumber.html",
+		"json:target/cucumber.json",
 		"html:target/htmlReports/report.html",
 		"json:target/jsonReports/report.json",
 		"junit:target/junitReports/report.xml",
@@ -20,5 +22,4 @@ plugin= {"pretty",
    })
 public class TestRunner{
 
-	
 }
