@@ -8,7 +8,9 @@ import java.util.Properties;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.BeforeTest;
 import java.util.concurrent.TimeUnit;
 
@@ -49,9 +51,13 @@ public class BaseClass {
 //        } else if (browserName.equalsIgnoreCase("firefox")) {
 //            WebDriverManager.firefoxdriver().setup();
 //            driver = new FirefoxDriver();
-//        }
-    	WebDriverManager.chromedriver().setup();
-    	driver = new ChromeDriver();
+////        }
+   	WebDriverManager.chromedriver().setup(); 
+   	ChromeOptions options=new ChromeOptions();
+   	options.addArguments("--headless");
+   	driver = new ChromeDriver(options);
+//    	WebDriverManager.safaridriver().setup();
+//        driver= new SafariDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
